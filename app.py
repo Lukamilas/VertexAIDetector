@@ -622,8 +622,6 @@ user_text = st.text_area(
 
 ai_highlight_coverage = 0
 
-flagged_sentences = []
-
 # ==================================================
 # ANALYZE BUTTON
 # ==================================================
@@ -762,47 +760,128 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
     st.write(f"Category: {category}")
 
 # ==================================================
-
 # AI HIGHLIGHT COVERAGE
-
 # ==================================================
 
     import re
 
-    sentences = re.split(r'(?<=[.!?])\s+', user_text)
-
-    total_chars = len(user_text)
+    sentences = re.split(r'(?<=[.!?])\s+', user_text.strip())
 
     flagged_chars = 0
+    total_chars = len(user_text)
 
     flagged_sentences = []
 
     for sentence in sentences:
 
-        if sentence.strip():
+        if not sentence.strip():
+            continue
 
-            sentence_X = vectorizer.transform([sentence])
+        sentence_X = vectorizer.transform([sentence])
 
-            sentence_ai_prob = (
-               	model.predict_proba(sentence_X)[0][1]
-               	* 100
-		)
+        sentence_ai_probability = (
+            model.predict_proba(sentence_X)[0][1] * 100
+    )
 
-            if sentence_ai_prob >= 70:
+        # Sentence is considered AI-like at 70%+
+    if sentence_ai_probability >= 70:
 
-                flagged_chars += len(sentence)
+            flagged_chars += len(sentence)
 
-                flagged_sentences.append(
-                    (
-                        sentence,
-                        round(sentence_ai_prob, 1)
-                    )
-                )
+            flagged_sentences.append(
+         (
+                    sentence,
+                    round(sentence_ai_probability, 1)
+            )
+            )
 
     if total_chars > 0:
 
         ai_highlight_coverage = round(
             (flagged_chars / total_chars) * 100,
+            1
+    )
+
+    else:
+
+        ai_highlight_coverage = 0
+
+
+# ==================================================
+# AI HIGHLIGHTING + REASONS
+# ==================================================
+
+    import re
+
+    st.subheader("AI Writing Analysis")
+
+    sentences = re.split(r'(?<=[.!?])\s+', user_text.strip())
+
+    flagged_sentences = []
+    highlighted_text = ""
+
+    total_chars = len(user_text)
+    weighted_ai_chars = 0
+
+    for sentence in sentences:
+
+        if not sentence.strip():
+            continue
+
+        sentence_X = vectorizer.transform([sentence])
+
+        sentence_ai_probability = (
+            model.predict_proba(sentence_X)[0][1] * 100
+    )
+
+        probability = round(sentence_ai_probability, 1)
+
+        # RED = strong AI signal
+    if probability >= 80:
+
+            highlighted_text += (
+                f'<span style="background-color:#ff9999; '
+                f'padding:2px; border-radius:3px;">'
+                f'{sentence}</span> '
+            )
+
+            weighted_ai_chars += len(sentence)
+
+            flagged_sentences.append(
+            (sentence, probability, "strong")
+            )
+
+    # YELLOW = moderate AI signal
+    elif probability >= 65:
+
+            highlighted_text += (
+            f'<span style="background-color:#fff29a; '
+            f'padding:2px; border-radius:3px;">'
+            f'{sentence}</span> '
+            )
+
+            weighted_ai_chars += len(sentence) * 0.5
+
+            flagged_sentences.append(
+            (sentence, probability, "moderate")
+            )
+
+    # No highlight
+    else:
+
+            highlighted_text += (
+            f'{sentence} '
+            )
+
+
+# ==================================================
+# AI HIGHLIGHT COVERAGE
+# ==================================================
+
+    if total_chars > 0:
+
+        ai_highlight_coverage = round(
+            (weighted_ai_chars / total_chars) * 100,
             1
         )
 
@@ -810,12 +889,80 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
         ai_highlight_coverage = 0
 
-    st.write(
-    f"AI Highlight Coverage: {ai_highlight_coverage}%"
-    )
 
 # ==================================================
-# REASONS
+# DISPLAY HIGHLIGHTED PARAGRAPH
+# ==================================================
+
+    st.markdown("### Highlighted Text")
+
+    st.markdown(
+    f"""
+    <div style="
+            padding:15px;
+            border:1px solid #ddd;
+            border-radius:8px;
+            line-height:1.7;
+            font-size:16px;
+    ">
+            {highlighted_text}
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+
+
+# ==================================================
+# COVERAGE
+# ==================================================
+
+    st.metric(
+    "AI Highlight Coverage",
+    f"{ai_highlight_coverage}%"
+    )
+
+
+# ==================================================
+# LEGEND
+# ==================================================
+
+    st.markdown(
+    "🔴 **Strong AI signal** &nbsp;&nbsp; "
+    "🟡 **Moderate AI signal**"
+	)
+
+
+# ==================================================
+# FLAGGED SENTENCES
+# ==================================================
+
+    st.subheader("Sentences Flagged")
+
+    if flagged_sentences:
+
+        for sentence, probability, strength in flagged_sentences:
+
+            if strength == "strong":
+
+                st.error(
+                    f"🔴 **{probability}% AI**\n\n"
+                    f"{sentence}"
+                )
+
+            else:
+
+                st.warning(
+                    f"🟡 **{probability}% AI**\n\n"
+                    f"{sentence}"
+                )
+
+    else:
+
+        st.write("No sentences were strongly flagged.")
+
+
+# ==================================================
+# EXISTING REASONS
 # ==================================================
 
     with st.expander("Reasons for AI"):
@@ -830,34 +977,18 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
             st.write("None")
 
+
     with st.expander("Reasons for Human"):
 
         if human_reasons:
 
             for word, score in human_reasons:
 
-                st.write(f"• {word}")
+                 st.write(f"• {word}")
 
         else:
 
             st.write("None")
 
-    st.subheader("Sentences Flagged")
-
-    if flagged_sentences:
-
-        for sentence, score in flagged_sentences:
-
-            st.write(
-                f"🔴 {score}% AI"
-            )
-
-            st.write(sentence)
-
-    else:
-
-        st.write(
-            "No sentences exceeded the AI threshold."
-        )
 
 
