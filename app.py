@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
@@ -759,13 +759,16 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
     st.write(f"Category: {category}")
 
-# ==================================================
-# AI HIGHLIGHT COVERAGE
-# ==================================================
+    # ==================================================
+    # AI HIGHLIGHT COVERAGE
+    # ==================================================
 
     import re
 
-    sentences = re.split(r'(?<=[.!?])\s+', user_text.strip())
+    sentences = re.split(
+        r'(?<=[.!?])\s+',
+        user_text.strip()
+    )
 
     flagged_chars = 0
     total_chars = len(user_text)
@@ -781,26 +784,26 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
         sentence_ai_probability = (
             model.predict_proba(sentence_X)[0][1] * 100
-    )
+        )
 
         # Sentence is considered AI-like at 70%+
-    if sentence_ai_probability >= 70:
+        if sentence_ai_probability >= 70:
 
-        flagged_chars += len(sentence)
+            flagged_chars += len(sentence)
 
-        flagged_sentences.append(
-        (
-            sentence,
-            round(sentence_ai_probability, 1)
-        )
-    )
+            flagged_sentences.append(
+                (
+                    sentence,
+                    round(sentence_ai_probability, 1)
+                )
+            )
 
     if total_chars > 0:
 
         ai_highlight_coverage = round(
             (flagged_chars / total_chars) * 100,
             1
-    )
+        )
 
     else:
 
