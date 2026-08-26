@@ -786,14 +786,14 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         # Sentence is considered AI-like at 70%+
     if sentence_ai_probability >= 70:
 
-            flagged_chars += len(sentence)
+        flagged_chars += len(sentence)
 
-            flagged_sentences.append(
-         (
-                    sentence,
-                    round(sentence_ai_probability, 1)
-            )
-            )
+        flagged_sentences.append(
+        (
+            sentence,
+            round(sentence_ai_probability, 1)
+        )
+    )
 
     if total_chars > 0:
 
