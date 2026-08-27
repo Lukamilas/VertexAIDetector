@@ -852,11 +852,11 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
             f'{sentence}</span> '
             )
 
-            weighted_ai_chars += len(sentence)
+        weighted_ai_chars += len(sentence)
 
-            flagged_sentences.append(
-            (sentence, probability, "strong")
-            )
+        flagged_sentences.append(
+        (sentence, probability, "strong")
+        )
 
     # YELLOW = moderate AI signal
     elif probability >= 65:
