@@ -837,7 +837,7 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
             model.predict_proba(sentence_X)[0][1] * 100
         )
 		
-		st.write(
+				st.write(
             f"DEBUG: {round(sentence_ai_probability, 1)}% — {sentence}"
         )
 
