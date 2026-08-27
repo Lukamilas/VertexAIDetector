@@ -836,6 +836,7 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         sentence_ai_probability = (
             model.predict_proba(sentence_X)[0][1] * 100
         )
+		
 		st.write(
             f"DEBUG: {round(sentence_ai_probability, 1)}% — {sentence}"
         )
@@ -845,10 +846,10 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         # RED = strong AI signal
     if probability >= 80:
 
-            highlighted_text += (
-                f'<span style="background-color:#ff9999; '
-                f'padding:2px; border-radius:3px;">'
-                f'{sentence}</span> '
+        highlighted_text += (
+            f'<span style="background-color:#ff9999; '
+            f'padding:2px; border-radius:3px;">'
+            f'{sentence}</span> '
             )
 
             weighted_ai_chars += len(sentence)
