@@ -590,7 +590,7 @@ texts = [
 
     "Ultimately, nurturing a culture of continuous optimization and technological synthesis is what empowers market leaders to scale effectively, mitigate systemic risk, and redefine industry benchmarks.",
 
-"I think one of the biggest advantages of technology is that it allows people to communicate and share information much more easily.",
+    "I think one of the biggest advantages of technology is that it allows people to communicate and share information much more easily.",
 
     "The weather was pretty nice today, and I decided to take a walk because I wanted to get some fresh air and clear my mind.",
 
@@ -781,10 +781,6 @@ labels = [0] * 126 + [1] * 250
 print("Number of training examples:", len(texts))
 print("Number of labels:", len(labels))
 
-# ==================================================
-# TRAIN MODEL
-# ==================================================
-    
 # ==================================================
 # TRAIN MODEL
 # ==================================================
