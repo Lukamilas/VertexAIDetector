@@ -776,11 +776,7 @@ texts = [
     
     ]
 
-st.write("TOTAL TEXTS:", len(texts))
-
-labels = [0] * 126 + [1] * 250
-
-st.write("TOTAL LABELS:", len(labels))
+labels = [0] * 126 + [1] * 254
 
 # ==================================================
 # TRAIN MODEL
