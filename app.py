@@ -776,10 +776,10 @@ texts = [
     
     ]
 
-labels = [0] * 126 + [1] * 250
-
 print("TOTAL TEXTS:", len(texts))
 print("TOTAL LABELS:", len(labels))
+
+labels = [0] * 126 + [1] * 250
 
 # ==================================================
 # TRAIN MODEL
