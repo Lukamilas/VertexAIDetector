@@ -786,8 +786,8 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
             model.predict_proba(sentence_X)[0][1] * 100
         )
 
-        # Sentence is considered AI-like at 70%+
-        if sentence_ai_probability >= 70:
+        # Sentence is considered AI-like at 50%+
+        if sentence_ai_probability >= 50:
 
             flagged_chars += len(sentence)
 
@@ -809,22 +809,25 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
         ai_highlight_coverage = 0
 
-
-# ==================================================
-# AI HIGHLIGHTING + REASONS
-# ==================================================
+    # ==================================================
+    # AI HIGHLIGHTING + REASONS
+    # ==================================================
 
     import re
+    import html
 
     st.subheader("AI Writing Analysis")
 
-    sentences = re.split(r'(?<=[.!?])\s+', user_text.strip())
+    sentences = re.split(
+        r'(?<=[.!?])\s+',
+        user_text.strip()
+    )
 
     flagged_sentences = []
-    highlighted_text = ""
+    highlighted_parts = []
 
     total_chars = len(user_text)
-    weighted_ai_chars = 0
+    highlighted_chars = 0
 
     for sentence in sentences:
 
@@ -836,59 +839,67 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         sentence_ai_probability = (
             model.predict_proba(sentence_X)[0][1] * 100
         )
-		
-        st.write(
-            f"DEBUG: {round(sentence_ai_probability, 1)}% — {sentence}"
+
+        probability = round(
+            sentence_ai_probability,
+            1
         )
 
-        probability = round(sentence_ai_probability, 1)
+        safe_sentence = html.escape(sentence)
 
-        # RED = strong AI signal
-    if probability >= 80:
+        # RED = strong AI signal (70%+)
+        if probability >= 70:
 
-        highlighted_text += (
-            f'<span style="background-color:#ff9999; '
-            f'padding:2px; border-radius:3px;">'
-            f'{sentence}</span> '
+            highlighted_parts.append(
+                f'<span style="background-color:#ff9999; '
+                f'padding:2px; border-radius:3px;">'
+                f'{safe_sentence}</span>'
             )
 
-        weighted_ai_chars += len(sentence)
-
-        flagged_sentences.append(
-        (sentence, probability, "strong")
-        )
-
-    # YELLOW = moderate AI signal
-    elif probability >= 65:
-
-            highlighted_text += (
-            f'<span style="background-color:#fff29a; '
-            f'padding:2px; border-radius:3px;">'
-            f'{sentence}</span> '
-            )
-
-            weighted_ai_chars += len(sentence) * 0.5
+            highlighted_chars += len(sentence)
 
             flagged_sentences.append(
-            (sentence, probability, "moderate")
+                (
+                    sentence,
+                    probability,
+                    "strong"
+                )
             )
 
-    # No highlight
-    else:
+        # YELLOW = moderate AI signal (50–69.9%)
+        elif probability >= 50:
 
-            highlighted_text += (
-            f'{sentence} '
+            highlighted_parts.append(
+                f'<span style="background-color:#fff29a; '
+                f'padding:2px; border-radius:3px;">'
+                f'{safe_sentence}</span>'
             )
 
+            highlighted_chars += len(sentence)
 
-# ==================================================
-# AI HIGHLIGHT COVERAGE
-# ==================================================
+            flagged_sentences.append(
+                (
+                    sentence,
+                    probability,
+                    "moderate"
+                )
+            )
+
+        # NO HIGHLIGHT
+        else:
+
+            highlighted_parts.append(
+                safe_sentence
+            )
+
+    # ==================================================
+    # AI HIGHLIGHT COVERAGE
+    # ==================================================
 
     if total_chars > 0:
 
         ai_highlight_coverage = round(
-            (weighted_ai_chars / total_chars) * 100,
+            (highlighted_chars / total_chars) * 100,
             1
         )
 
@@ -896,49 +907,48 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
         ai_highlight_coverage = 0
 
-
-# ==================================================
-# DISPLAY HIGHLIGHTED PARAGRAPH
-# ==================================================
+    # ==================================================
+    # DISPLAY HIGHLIGHTED PARAGRAPH
+    # ==================================================
 
     st.markdown("### Highlighted Text")
 
+    highlighted_text = " ".join(
+        highlighted_parts
+    )
+
     st.markdown(
-    f"""
-    <div style="
+        f"""
+        <div style="
             padding:15px;
             border:1px solid #ddd;
             border-radius:8px;
             line-height:1.7;
             font-size:16px;
-    ">
+        ">
             {highlighted_text}
-    </div>
-    """,
-    unsafe_allow_html=True
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
-
-# ==================================================
-# COVERAGE
-# ==================================================
+    # ==================================================
+    # COVERAGE
+    # ==================================================
 
     st.metric(
-    "AI Highlight Coverage",
-    f"{ai_highlight_coverage}%"
+        "AI Highlight Coverage",
+        f"{ai_highlight_coverage}%"
     )
 
-
-# ==================================================
-# LEGEND
-# ==================================================
+    # ==================================================
+    # LEGEND
+    # ==================================================
 
     st.markdown(
-    "🔴 **Strong AI signal** &nbsp;&nbsp; "
-    "🟡 **Moderate AI signal**"
-	)
-
-
+        "🔴 **Strong AI signal (70%+)** &nbsp;&nbsp; "
+        "🟡 **Moderate AI signal (50–69.9%)**"
+    )
 # ==================================================
 # FLAGGED SENTENCES
 # ==================================================
