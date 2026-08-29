@@ -636,6 +636,13 @@ test_accuracy = round(
     1
 )
 
+test_accuracy = round(
+    (correct_predictions / len(test_labels)) * 100,
+    1
+)
+
+print("Test Accuracy:", test_accuracy, "%")
+
 # ==================================================
 # STREAMLIT UI
 # ==================================================
