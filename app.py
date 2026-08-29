@@ -777,6 +777,13 @@ texts = [
     ]
 
 labels = [0] * 126 + [1] * 250
+
+print("Number of training examples:", len(texts))
+print("Number of labels:", len(labels))
+
+# ==================================================
+# TRAIN MODEL
+# ==================================================
     
 # ==================================================
 # TRAIN MODEL
