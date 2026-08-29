@@ -590,9 +590,193 @@ texts = [
 
     "Ultimately, nurturing a culture of continuous optimization and technological synthesis is what empowers market leaders to scale effectively, mitigate systemic risk, and redefine industry benchmarks.",
 
+"I think one of the biggest advantages of technology is that it allows people to communicate and share information much more easily.",
+
+    "The weather was pretty nice today, and I decided to take a walk because I wanted to get some fresh air and clear my mind.",
+
+    "Artificial intelligence has become an increasingly important part of modern society, influencing education, communication, business, and many other areas.",
+
+    "I went through my notes a couple of times before the test, which helped me feel more prepared and confident about the material.",
+
+    "One important factor to consider is how technology can be used responsibly while still allowing people to benefit from its many advantages.",
+
+    "The movie was entertaining, although some parts felt predictable and the ending could have been developed in greater detail.",
+
+    "When students have access to effective resources, they can often develop a deeper understanding of difficult concepts and become more independent learners.",
+
+    "I wasn't completely sure what to do at first, but after looking at the instructions again, the assignment became much easier to understand.",
+
+    "Social media has changed communication by allowing people to share ideas instantly and connect with others regardless of physical distance.",
+
+    "The team had several opportunities to score, but better communication and more consistent execution would have improved the overall performance.",
+
+    "I think the main reason the project worked was because everyone had a clear responsibility and understood what they needed to accomplish.",
+
+    "Digital tools can make everyday tasks more efficient by reducing the amount of time required to organize information and complete routine activities.",
+
+    "After reviewing the situation, it became clear that the original plan needed to be adjusted in order to achieve a more effective outcome.",
+
+    "The book provides an interesting perspective on the importance of relationships and demonstrates how individual decisions can influence larger events.",
+
+    "I decided to finish my homework before playing games because completing my responsibilities first allowed me to relax afterward without worrying about schoolwork.",
+
+    "In today's increasingly connected world, individuals have greater access to information than ever before, creating both opportunities and challenges.",
+
+    "The experiment produced results that supported the original hypothesis and demonstrated the relationship between the variables being studied.",
+
+    "Although the assignment seemed difficult initially, breaking it into smaller sections made the overall process much more manageable.",
+
+    "Businesses that effectively respond to changing consumer expectations are more likely to maintain long-term success in competitive markets.",
+
+    "I usually prefer working in the morning because I can concentrate more easily when I have fewer distractions around me.",
+
+    "Education plays an essential role in preparing individuals for future opportunities by developing knowledge, critical thinking, and communication skills.",
+
+    "The situation could have been handled differently if the people involved had communicated their concerns earlier and worked toward a shared solution.",
+
+    "I looked over the problem several times before realizing that I had misunderstood one of the instructions.",
+
+    "Environmental sustainability requires long-term cooperation between governments, organizations, and individuals in order to produce meaningful results.",
+
+    "The presentation was successful because the information was organized clearly and the main points were supported with relevant examples.",
+
+    "Technology can provide valuable opportunities for students, particularly when digital resources are used to supplement rather than replace effective instruction.",
+
+    "I wasn't expecting the assignment to take so long, but once I started working through it, I realized there were more steps than I originally thought.",
+
+    "Effective leadership involves more than simply making decisions; it also requires communication, accountability, and the ability to respond to changing circumstances.",
+
+    "The results suggest that small changes in behavior can sometimes produce meaningful differences over an extended period of time.",
+
+    "I tried a different approach after the first one didn't work, and eventually I was able to figure out what the problem was.",
+
+    "Modern organizations increasingly rely on data to identify trends, evaluate performance, and make decisions based on measurable evidence.",
+
+    "The character's decision was important because it changed the direction of the story and affected the relationships between several other characters.",
+
+    "I think having a schedule makes it easier to keep track of everything, especially when several assignments are due around the same time.",
+
+    "Scientific research allows society to develop a better understanding of complex issues while providing evidence that can guide future decisions.",
+
+    "The most effective solution would likely involve addressing the underlying cause of the problem rather than simply responding to its immediate effects.",
+
+    "I finished the first part quickly, but the second section took much longer because I had to think more carefully about my answer.",
+
+    "Communication is an important component of successful teamwork because it allows individuals to coordinate their efforts and resolve potential misunderstandings.",
+
+    "The increasing availability of online resources has made it easier for people to access educational information outside traditional classroom environments.",
+
+    "I wasn't sure whether my answer was correct, so I went back through the steps and checked each part of my work.",
+
+    "Organizations can improve their performance by identifying areas that need improvement and developing strategies that address those weaknesses.",
+
+    "The author's use of specific examples helps communicate the central argument and makes the overall message easier for readers to understand.",
+
+    "I decided to take a break after studying for a while because I noticed that I was having trouble concentrating on the material.",
+
+    "Artificial intelligence can support productivity by automating repetitive tasks and helping individuals analyze large amounts of information more efficiently.",
+
+    "The decision ultimately produced positive results, although several unexpected challenges had to be addressed along the way.",
+
+    "I thought the test would be harder than it was, but reviewing the material beforehand definitely made me feel more prepared.",
+
+    "A balanced approach is often necessary when addressing complex problems because different perspectives can reveal potential solutions that might otherwise be overlooked.",
+
+    "The development of new technologies continues to influence the workplace by changing how people communicate, collaborate, and complete tasks.",
+
+    "I started with the easiest questions and then returned to the harder ones once I had completed everything I felt confident about.",
+
+    "The evidence supports the conclusion that environmental conditions can have a significant influence on the behavior and development of living organisms.",
+
+    "Successful projects generally require clear objectives, effective planning, and consistent communication among everyone involved.",
+
+    "I didn't really understand the topic at first, but seeing a few examples helped me understand how the different ideas were connected.",
+
+    "Businesses can use customer feedback to identify areas for improvement and develop products or services that better address consumer needs.",
+
+    "The story demonstrates how seemingly small decisions can eventually lead to significant consequences for the people involved.",
+
+    "I usually write down the things I need to finish because otherwise I sometimes forget about smaller assignments until the last minute.",
+
+    "The responsible implementation of artificial intelligence requires consideration of accuracy, privacy, transparency, and potential effects on individuals.",
+
+    "The results of the study indicate that additional research may be necessary before a definitive conclusion can be reached.",
+
+    "I changed my original answer after looking at the problem again and realizing that I had overlooked an important detail.",
+
+    "Technology has created new opportunities for collaboration by allowing people to work together even when they are located in different places.",
+
+    "The central argument becomes more convincing when it is supported by specific evidence rather than relying solely on general statements.",
+
+    "I didn't expect the practice session to be so helpful, but repeating the same skill several times made it feel much more natural.",
+
+    "Economic conditions can influence consumer behavior by affecting purchasing decisions, confidence, and the amount of money people are willing to spend.",
+
+    "The proposed solution addresses several of the major challenges while also creating opportunities for future improvement.",
+
+    "I had trouble getting started because I wasn't sure how to organize my ideas, but making a quick outline helped.",
+
+    "Students can benefit from personalized learning strategies because different individuals may require different approaches to understand the same material.",
+
+    "The final result was different from what I originally expected, which provided an opportunity to reconsider the assumptions behind my prediction.",
+
+    "I went back and checked my work before submitting it because I wanted to make sure I hadn't made any simple mistakes.",
+
+    "The continued development of digital technology is likely to influence education by changing how students access information and interact with learning materials.",
+
+    "The author's perspective becomes clearer throughout the passage as additional evidence is introduced to support the main idea.",
+
+    "I prefer studying somewhere quiet because background noise usually makes it harder for me to stay focused.",
+
+    "Organizations that prioritize innovation may be better positioned to adapt to changes in technology, consumer behavior, and competitive conditions.",
+
+    "The experiment demonstrated that changing one variable can produce measurable effects on another variable under controlled conditions.",
+
+    "I thought I had finished everything, but then I remembered that there was one smaller assignment I still needed to complete.",
+
+    "Effective problem solving often requires individuals to evaluate multiple possibilities before selecting the approach that is most appropriate.",
+
+    "The use of digital communication has made it possible to exchange information quickly, but it has also created new concerns regarding privacy and security.",
+
+    "I wasn't particularly interested in the topic at first, but learning more about it made me realize that there were several interesting aspects I hadn't considered.",
+
+    "The findings provide useful information that can contribute to future research and help researchers develop a more complete understanding of the issue.",
+
+    "I made a few changes to my original plan after realizing that some of the steps would take longer than I had expected.",
+
+    "Long-term success generally depends on the ability to adapt to changing conditions while maintaining a clear sense of purpose and direction.",
+
+    "The main character gradually changes throughout the story as different experiences challenge the beliefs and assumptions that influenced earlier decisions.",
+
+    "I checked the instructions one more time before turning in the assignment because I wanted to make sure I had answered every part of the question.",
+
+    "Data-driven decision-making can help organizations identify patterns that might not be immediately visible through observation alone.",
+
+    "The issue is complicated because there are several factors involved, and addressing only one of them may not produce a lasting solution.",
+
+    "I felt more confident after practicing the material several times because I had a better idea of what I understood and what I still needed to review.",
+
+    "The increasing use of automation has the potential to improve efficiency while also requiring workers to develop new skills and adapt to changing responsibilities.",
+
+    "The conclusion is supported by the evidence presented throughout the analysis, although additional information could provide a more complete perspective.",
+
+    "I decided to start earlier this time because waiting until the last minute had made the previous assignment much more stressful.",
+
+    "Clear communication can reduce misunderstandings and help groups coordinate their efforts toward a common objective.",
+
+    "The topic remains relevant because technological developments continue to create new questions about how society should approach innovation and responsibility.",
+
+    "I realized that taking a few minutes to organize everything beforehand actually saved me time later because I didn't have to keep stopping to figure out what to do next.",
+
+    "The overall effectiveness of a strategy depends on how well it addresses the specific circumstances and objectives involved.",
+
+    "The information presented provides a useful foundation for understanding the issue, while also demonstrating why further discussion may be necessary.",
+
+    "I didn't get the result I wanted on the first attempt, but looking at what went wrong helped me figure out what I should change next time."
+    
     ]
 
-labels = [0] * 126 + [1] * 162
+labels = [0] * 126 + [1] * 250
     
 # ==================================================
 # TRAIN MODEL
