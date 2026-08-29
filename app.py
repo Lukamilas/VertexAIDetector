@@ -637,12 +637,40 @@ test_accuracy = round(
     1
 )
 
-test_accuracy = round(
-    (correct_predictions / len(test_labels)) * 100,
-    1
+st.write(f"TEST ACCURACY: {test_accuracy}%")
+
+st.write(
+    f"Correct: {correct_predictions} / {len(test_labels)}"
 )
 
-st.write(f"TEST ACCURACY: {test_accuracy}%")
+st.subheader("Incorrect Test Predictions")
+
+for text, actual, prediction in zip(
+    test_texts,
+    test_labels,
+    test_predictions
+):
+
+    if actual != prediction:
+
+        actual_label = (
+            "Human"
+            if actual == 0
+            else "AI"
+        )
+
+        predicted_label = (
+            "Human"
+            if prediction == 0
+            else "AI"
+        )
+
+        st.write(
+            f"**Actual:** {actual_label}  "
+            f"**Predicted:** {predicted_label}"
+        )
+
+        st.write(text)
 
 # ==================================================
 # STREAMLIT UI
