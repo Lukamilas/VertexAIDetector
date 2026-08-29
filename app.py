@@ -642,7 +642,7 @@ test_accuracy = round(
     1
 )
 
-print("Test Accuracy:", test_accuracy, "%")
+st.write(f"TEST ACCURACY: {test_accuracy}%")
 
 # ==================================================
 # STREAMLIT UI
