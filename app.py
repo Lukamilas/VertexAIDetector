@@ -611,6 +611,32 @@ model = LogisticRegression()
 model.fit(X, labels)
 
 # ==================================================
+# MODEL ACCURACY TEST
+# ==================================================
+
+test_texts = test_human + test_ai
+
+test_labels = (
+    [0] * len(test_human) +
+    [1] * len(test_ai)
+)
+
+test_X = vectorizer.transform(test_texts)
+
+test_predictions = model.predict(test_X)
+
+correct_predictions = sum(
+    prediction == actual
+    for prediction, actual
+    in zip(test_predictions, test_labels)
+)
+
+test_accuracy = round(
+    (correct_predictions / len(test_labels)) * 100,
+    1
+)
+
+# ==================================================
 # STREAMLIT UI
 # ==================================================
 
