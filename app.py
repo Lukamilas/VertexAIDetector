@@ -860,7 +860,7 @@ texts = [
     
     ]
 
-labels = [0] * 166 + [1] * 254
+labels = [0] * 167 + [1] * 254
 
 # ==================================================
 # TRAIN MODEL
@@ -875,15 +875,11 @@ vectorizer = TfidfVectorizer(
 
 X = vectorizer.fit_transform(texts)
 
-
-print("TEXTS:", len(texts))
-print("LABELS:", len(labels))
-
 model = LogisticRegression(
     class_weight="balanced"
 )
 
-#model.fit(X, labels)
+model.fit(X, labels)
 
 # ==================================================
 # MODEL ACCURACY TEST
