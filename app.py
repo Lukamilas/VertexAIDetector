@@ -779,7 +779,25 @@ texts = [
     
     ]
 
-labels = [0] * 126 + [1] * 254
+# ==================================================
+# ADD HUMAN EXAMPLES FROM BROWN CORPUS
+# ==================================================
+
+all_sentences = []
+
+for category in brown.categories():
+    sents = brown.sents(categories=category)
+    all_sentences.extend(sents)
+
+random.seed(42)
+
+sample = random.sample(all_sentences, 124)
+
+sample_text = [' '.join(s) for s in sample]
+
+texts.extend(sample_text)
+
+labels = [0] * 250 + [1] * 254
 
 # ==================================================
 # TRAIN MODEL
