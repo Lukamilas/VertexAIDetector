@@ -1033,7 +1033,14 @@ test_labels = (
     [1] * len(test_ai)
 )
 
-test_X = vectorizer.transform(test_texts)
+test_word_X = word_vectorizer.transform(test_texts)
+
+test_char_X = char_vectorizer.transform(test_texts)
+
+test_X = hstack([
+    test_word_X,
+    test_char_X
+])
 
 test_predictions = model.predict(test_X)
 
