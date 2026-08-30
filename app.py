@@ -875,12 +875,12 @@ vectorizer = TfidfVectorizer(
 
 X = vectorizer.fit_transform(texts)
 
+print("TEXTS:", len(texts))
+print("LABELS:", len(labels))
+
 model = LogisticRegression(
     class_weight="balanced"
 )
-
-print("TEXTS:", len(texts))
-print("LABELS:", len(labels))
 
 model.fit(X, labels)
 
