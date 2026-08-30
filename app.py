@@ -1017,7 +1017,7 @@ X = hstack([word_X, char_X])
 # TRAIN MODEL
 model = LogisticRegression(
     class_weight="balanced",
-    max_iter=1000
+    max_iter=1000,
     random_state=42
 )
 
