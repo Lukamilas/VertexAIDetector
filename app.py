@@ -1,12 +1,15 @@
 import streamlit as st
+import random
+import nltk
+
+from nltk.corpus import brown
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+
 from test_data import test_human, test_ai
 
 nltk.download("brown", quiet=True)
-
-import random
-from nltk.corpus import brown
 
 # TRAINING DATA
 # 0 = Human
