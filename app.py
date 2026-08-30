@@ -1018,6 +1018,7 @@ X = hstack([word_X, char_X])
 model = LogisticRegression(
     class_weight="balanced",
     max_iter=1000
+    random_state=42
 )
 
 model.fit(X, labels)
@@ -1130,6 +1131,18 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 # EXPLANATION ENGINE
 # ==================================================
 
+    word_feature_names = word_vectorizer.get_feature_names_out()
+    char_feature_names = char_vectorizer.get_feature_names_out()
+
+    feature_names = list(word_feature_names) + list(char_feature_names)
+
+    weights = model.coef_[0]
+
+    input_vector = sample_X.toarray()[0]
+
+    ai_reasons = []
+    human_reasons = []
+    
     for i, value in enumerate(input_vector):
 
         if value > 0:
