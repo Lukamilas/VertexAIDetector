@@ -860,6 +860,9 @@ texts = [
     
     ]
 
+print("TEXTS:", len(texts))
+print("LABELS:", len(labels))
+
 labels = [0] * 166 + [1] * 254
 
 # ==================================================
