@@ -1,15 +1,9 @@
 import streamlit as st
-import random
-import nltk
-
-from nltk.corpus import brown
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 from test_data import test_human, test_ai
-
-nltk.download("brown", quiet=True)
 
 # TRAINING DATA
 # 0 = Human
@@ -784,25 +778,7 @@ texts = [
     
     ]
 
-# ==================================================
-# ADD HUMAN EXAMPLES FROM BROWN CORPUS
-# ==================================================
-
-all_sentences = []
-
-for category in brown.categories():
-    sents = brown.sents(categories=category)
-    all_sentences.extend(sents)
-
-random.seed(42)
-
-sample = random.sample(all_sentences, 124)
-
-sample_text = [' '.join(s) for s in sample]
-
-texts.extend(sample_text)
-
-labels = [0] * 250 + [1] * 254
+labels = [0] * 126 + [1] * 254
 
 # ==================================================
 # TRAIN MODEL
