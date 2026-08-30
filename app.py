@@ -860,9 +860,6 @@ texts = [
     
     ]
 
-print("TEXTS:", len(texts))
-print("LABELS:", len(labels))
-
 labels = [0] * 166 + [1] * 254
 
 # ==================================================
@@ -881,6 +878,9 @@ X = vectorizer.fit_transform(texts)
 model = LogisticRegression(
     class_weight="balanced"
 )
+
+print("TEXTS:", len(texts))
+print("LABELS:", len(labels))
 
 model.fit(X, labels)
 
