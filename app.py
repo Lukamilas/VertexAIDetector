@@ -347,6 +347,124 @@ texts = [
     "All the other siblings laugh, but Nenny replies: “That’s Mexico all right. That’s what I was thinking exactly” (Cisneros 18). In these quotes, Esperanza uses the simile “looks like Mexico”.",
 
     "Two of Esperanza’s siblings laugh, but Nenny relates to Esperanza by using the metaphor, “[t]hat’s Mexico all right”. This vignette is important because it establishes an important connection between Esperanza and Nenny.",
+
+    "Troy says, \" '[t]he white man ain't gonna let you get nowhere with that football noway' \" (Wilson 35), revealing his value of hard work rather than talent.",
+
+    "The phrase \"ain't gonna let you\" shows how making a living goes deeper than talent, while the phrase \"nowhere\" suggests complete restriction.",
+
+    "Also, \"the white man\" not letting Cory play football is indicative of Troy's fear of racism.",
+
+    "Instead of letting Cory play football and follow his dreams, Troy's desire for him is to find a solid job that pays well.",
+
+    "In conclusion, the theme of hard work versus talent shapes how Troy lives his life.",
+
+    "When Macbeth hesitates and decides murdering Duncan is the wrong decision, Lady Macbeth says, “When you durst do it, then you were a man; / And to be more than what you were, you would/ Be so much more the man. Nor time nor place” (1.7.56–58).",
+
+    "Lady Macbeth manipulates Macbeth into being threatened by her decisiveness and strong statements.",
+
+    "Lady Macbeth then informs Macbeth that he needs to be more of a man.",
+
+    "Women in the Elizabethan era were expected to be subservient.",
+
+    "She stands up to Macbeth showing the reader she isn't scared to challenge his authority.",
+
+    "Finally, Lady Macbeth doesn’t do what she is expected to: defying women's gender roles.",
+
+    "He is shown being “weak” which doesn’t represent how a man should've acted back in the Elizabethan era.",
+
+    "Men were supposed to be the head of the house and do three things to enter manhood; control the discipline in their family, show authority, and control women (Shepard).",
+
+    "By letting Lady Macbeth do this, Macbeth fails to complete the male role in the house.",
+
+    "Macbeth rejects his role as a man by not showing authority.",
+
+    "This reveals to the reader that Macbeth doesn’t conform to the expectations of how a man should act.",
+
+    "Macbeth doesn’t take any criticism from Lady Macbeth, keeping her from controlling him.",
+
+    "Also, he commands her to bring him a drink which would be a very typical thing for a man to do in his time: making the woman of the house do most of the work while he sits and relaxes.",
+
+    "In conclusion, Macbeth goes from not meeting male expectations to playing the role of a a-typical man.",
+
+    "At one point, Macbeth defies gender roles when he allows Lady Macbeth to control him and tell him what to do.",
+
+    "In addition, Lady Macbeth doesn't wait on Macbeth and states her mind showing she isn't scared to express her thoughts to him.",
+
+    "Unfortunately, Gender roles are meant to undermine people and don’t allow them the freedom they deserve.",
+
+    "I am also excited to learn; however, I find some injustices in the school system, for example favoring students and many other things.",
+
+    "This and other injustices make me want to take action.",
+
+    "In regards to school, I am especially excited about this class and the diploma in entrepreneurial studies.",
+
+    "I am glad that it started this year; the year that I finished freshman year.",
+
+    "One thing I want to protect is integrity among students and sports.",
+
+    "For example, there are cheaters in tennis as there are in school.",
+
+    "I find this unfair, and it makes me want to take action.",
+
+    "If we could preserve integrity, I think that it would be very helpful for both the sports and the school system as a whole.",
+
+    "Lastly, I also think that protecting nature is important.",
+
+    "The story of Macbeth is more similar to the world today than you may think.",
+
+    "This is because of: unchecked power, arrogant leaders, and countries in chaos.",
+
+    "Throughout the story we see Macbeth rise to power through dark ways; moreover, things such as murdering king duncan and executing so-called “traitors”.",
+
+    "This rise to power quickly vanishes due to his arrogance and his idea of being superior to everyone and everything, even the supernatural.",
+
+    "Macbeth leaves his castle to get clarification from the witches on the prophecy they gave him.",
+
+    "The witches tell Macbeth that he will die when the forest reaches the castle.",
+
+    "Macbeth, being the arrogant man he is, thinks he will never die, claiming: \"That will never be/... high-placed Macbeth/Shall live the lease of nature, pay his breath/ To time\" (IV.i.108,112-14).",
+
+    "Macbeth is extremely arrogant and feels untouchable.",
+
+    "Being told he cannot die until Burnam Wood reaches the castle he feels like he \"shall live the lease of nature\".",
+
+    "Macbeth uses the word \"highplaced\" because he feels better than everyone.",
+
+    "Macbeth only cares about himself and the good news the witches give him, never looking at the potentially bad side of it.",
+
+    "However, this all-powerful feeling Macbeth has is quickly washed away by the trueness of the witches' warnings.",
+
+    "Macbeth sitting in his castle room is interrupted by a servant bearing bad news.",
+
+    "The servant tells Macbeth there is an army outside the castle walls disguising themselves with tree branches.",
+
+    "Macbeth, believing it's impossible, tells the servant to \"Go prick thy face... [Macbeth realises the severeness] I have almost forgotten the taste of fears\" (vi.vi.11).",
+
+    "Macbeth refuses to trust anyone, he tells someone who could possibly save his life to “Go prick thy face”, effectively proving himself as an evil dictator.",
+
+    "Once realization hits a wave of fear washes over him, this is proven through the fact that he said: “I have almost forgotten the taste of fear”; moreover, his use of almost shows that there is still a small amount of humanity left in him.",
+
+    "Macbeth's arrogance is what caused his death because he did not listen to the warnings.",
+
+    "Overall, arrogance is what proved to be what killed Macbeth.",
+
+    "Whether it was not listening to: his own servants, supernatural witches, or even himself, in the end it was his failure to rely on others because he believed he was superior.",
+
+    "Not only did he rise through completely immoral ways, he also became completely unfazed by all kinds of violence; furthermore, that is why it’s so shocking that he was so fearful on the day of his death.",
+
+    "In the vignette “Laughter”, the author, Sandra Cisneros, uses similes and metaphors to show how the main character, Esperanza, relates to her sister, Nenny.",
+
+    "Shortly before Esperanza goes to Gil’s Furniture Store, she has a flashback to driving by a house with her family.",
+
+    "Esperanza says, “[l]ook at that house,…it looks like Mexico.”",
+
+    "All the other siblings laugh, but Nenny replies: “That’s Mexico all right. That’s what I was thinking exactly” (Cisneros 18).",
+
+    "In these quotes, Esperanza uses the simile “looks like Mexico”.",
+
+    "Two of Esperanza’s siblings laugh, but Nenny relates to Esperanza by using the metaphor, “[t]hat’s Mexico all right”.",
+
+    "This vignette is important because it establishes an important connection between Esperanza and Nenny.",
     
     #AI
 
@@ -860,7 +978,7 @@ texts = [
     
     ]
 
-labels = [0] * 167 + [1] * 254
+labels = [0] * 226 + [1] * 254
 
 # ==================================================
 # TRAIN MODEL
