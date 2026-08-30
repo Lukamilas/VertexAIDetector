@@ -1117,7 +1117,10 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         sample_char_X
     ])
 
-    feature_names = vectorizer.get_feature_names_out()
+    word_feature_names = word_vectorizer.get_feature_names_out()
+    char_feature_names = char_vectorizer.get_feature_names_out()
+
+    feature_names = list(word_feature_names) + list(char_feature_names)
 
     weights = model.coef_[0]
 
