@@ -1361,7 +1361,7 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         1
     )
 
-        safe_sentence = html.escape(sentence)
+    safe_sentence = html.escape(sentence)
 
         # RED = strong AI signal (70%+)
         if probability >= 70:
