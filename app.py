@@ -1352,14 +1352,14 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         sentence_char_X
     ])
 
-        sentence_ai_probability = (
-            model.predict_proba(sentence_X)[0][1] * 100
+    sentence_ai_probability = (
+        model.predict_proba(sentence_X)[0][1] * 100
         )
 
         probability = round(
             sentence_ai_probability,
             1
-        )
+    )
 
         safe_sentence = html.escape(sentence)
 
