@@ -984,7 +984,10 @@ labels = [0] * 226 + [1] * 254
 # TRAIN MODEL
 # ==================================================
 
-vectorizer = TfidfVectorizer(
+from scipy.sparse import hstack
+
+# WORD FEATURES
+word_vectorizer = TfidfVectorizer(
     stop_words="english",
     ngram_range=(1,3),
     min_df=2,
@@ -992,8 +995,26 @@ vectorizer = TfidfVectorizer(
     sublinear_tf=True
 )
 
-X = vectorizer.fit_transform(texts)
+word_X = word_vectorizer.fit_transform(texts)
 
+
+# CHARACTER FEATURES
+char_vectorizer = TfidfVectorizer(
+    analyzer="char",
+    ngram_range=(3,5),
+    min_df=2,
+    max_features=20000,
+    sublinear_tf=True
+)
+
+char_X = char_vectorizer.fit_transform(texts)
+
+
+# COMBINE FEATURES
+X = hstack([word_X, char_X])
+
+
+# TRAIN MODEL
 model = LogisticRegression(
     class_weight="balanced",
     max_iter=1000
@@ -1080,7 +1101,13 @@ ai_highlight_coverage = 0
 
 if st.button("Analyze", key="analyze_button") and user_text.strip():
 
-    sample_X = vectorizer.transform([user_text])
+    sample_word_X = word_vectorizer.transform([user_text])
+    sample_char_X = char_vectorizer.transform([user_text])
+
+    sample_X = hstack([
+        sample_word_X,
+        sample_char_X
+    ])
 
     feature_names = vectorizer.get_feature_names_out()
 
