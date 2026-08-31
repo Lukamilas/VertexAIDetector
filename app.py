@@ -1382,31 +1382,31 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
             )
         )
 
-        # YELLOW = moderate AI signal (50–69.9%)
-        elif probability >= 50:
+    # YELLOW = moderate AI signal (50–69.9%)
+    elif probability >= 50:
 
-            highlighted_parts.append(
-                f'<span style="background-color:#fff29a; '
-                f'padding:2px; border-radius:3px;">'
-                f'{safe_sentence}</span>'
+        highlighted_parts.append(
+            f'<span style="background-color:#fff29a; '
+            f'padding:2px; border-radius:3px;">'
+            f'{safe_sentence}</span>'
+        )
+
+        highlighted_chars += len(sentence)
+
+        flagged_sentences.append(
+            (
+                sentence,
+                probability,
+                "moderate"
             )
+        )
 
-            highlighted_chars += len(sentence)
+    # NO HIGHLIGHT
+    else:
 
-            flagged_sentences.append(
-                (
-                    sentence,
-                    probability,
-                    "moderate"
-                )
-            )
-
-        # NO HIGHLIGHT
-        else:
-
-            highlighted_parts.append(
-                safe_sentence
-            )
+        highlighted_parts.append(
+            safe_sentence
+        )
 
     # ==================================================
     # AI HIGHLIGHT COVERAGE
