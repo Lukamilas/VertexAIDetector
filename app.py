@@ -465,6 +465,20 @@ texts = [
     "Two of Esperanza’s siblings laugh, but Nenny relates to Esperanza by using the metaphor, “[t]hat’s Mexico all right”.",
 
     "This vignette is important because it establishes an important connection between Esperanza and Nenny.",
+
+    "The witches' prophecies give Macbeth a false sense of confidence, ultimately leading to his downfall.",
+
+    "Late in the play, Macbeth seeks out the the witches in hope of hearing more prophecies of good fortune.",
+
+    "When he finds the witches, they summon three apparitions.",
+
+    "The first one tells Macbeth to beware Macduff, the Thane of Fife; however, the second apparition, gives Macbeth more confidence.",
+
+    "This quote is important because Macbeth only thinks about the good side of the ambiguous quote.",
+
+    "In the next line, Macbeth completely ignores the first apparition, He then claims that he doesn't need to fear Macduff at all.",
+
+    "His interpretation of this quote is easily disproven when Macduff says that he was ripped out of his mother's body and then slays Macbeth.",
     
     #AI
 
@@ -978,7 +992,7 @@ texts = [
     
     ]
 
-labels = [0] * 226 + [1] * 254
+labels = [0] * 233 + [1] * 254
 
 # ==================================================
 # TRAIN MODEL
