@@ -1303,7 +1303,14 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         if not sentence.strip():
             continue
 
-        sentence_X = vectorizer.transform([sentence])
+        sentence_word_X = word_vectorizer.transform([sentence])
+
+        sentence_char_X = char_vectorizer.transform([sentence])
+
+        sentence_X = hstack([
+            sentence_word_X,
+            sentence_char_X
+        ])
 
         sentence_ai_probability = (
             model.predict_proba(sentence_X)[0][1] * 100
