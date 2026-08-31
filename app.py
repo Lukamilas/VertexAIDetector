@@ -1363,24 +1363,24 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
     safe_sentence = html.escape(sentence)
 
-        # RED = strong AI signal (70%+)
-        if probability >= 70:
+    # RED = strong AI signal (70%+)
+    if probability >= 70:
 
-            highlighted_parts.append(
-                f'<span style="background-color:#ff9999; '
-                f'padding:2px; border-radius:3px;">'
-                f'{safe_sentence}</span>'
+        highlighted_parts.append(
+            f'<span style="background-color:#ff9999; '
+            f'padding:2px; border-radius:3px;">'
+            f'{safe_sentence}</span>'
+        )
+
+        highlighted_chars += len(sentence)
+
+        flagged_sentences.append(
+            (
+                sentence,
+                probability,
+                "strong"
             )
-
-            highlighted_chars += len(sentence)
-
-            flagged_sentences.append(
-                (
-                    sentence,
-                    probability,
-                    "strong"
-                )
-            )
+        )
 
         # YELLOW = moderate AI signal (50–69.9%)
         elif probability >= 50:
