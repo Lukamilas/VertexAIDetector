@@ -1366,68 +1366,68 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
         sentence_word_X = word_vectorizer.transform([sentence])
 
-    sentence_char_X = char_vectorizer.transform([sentence])
+        sentence_char_X = char_vectorizer.transform([sentence])
 
-    sentence_X = hstack([
-        sentence_word_X,
-        sentence_char_X
-    ])
+        sentence_X = hstack([
+            sentence_word_X,
+            sentence_char_X
+        ])
 
-    sentence_ai_probability = (
-        model.predict_proba(sentence_X)[0][1] * 100
+        sentence_ai_probability = (
+            model.predict_proba(sentence_X)[0][1] * 100
         )
 
-    probability = round(
-        sentence_ai_probability,
-        1
-    )
-
-    safe_sentence = html.escape(sentence)
-
-    # RED = strong AI signal (70%+)
-    if probability >= 70:
-
-        highlighted_parts.append(
-            f'<span style="background-color:#ff9999; '
-            f'padding:2px; border-radius:3px;">'
-            f'{safe_sentence}</span>'
+        probability = round(
+            sentence_ai_probability,
+            1
         )
 
-        highlighted_chars += len(sentence)
+        safe_sentence = html.escape(sentence)
 
-        flagged_sentences.append(
-            (
-                sentence,
-                probability,
-                "strong"
+        # RED = strong AI signal (70%+)
+        if probability >= 70:
+
+            highlighted_parts.append(
+                f'<span style="background-color:#ff9999; '
+                f'padding:2px; border-radius:3px;">'
+                f'{safe_sentence}</span>'
             )
-        )
 
-    # YELLOW = moderate AI signal (50–69.9%)
-    elif probability >= 50:
+            highlighted_chars += len(sentence)
 
-        highlighted_parts.append(
-            f'<span style="background-color:#fff29a; '
-            f'padding:2px; border-radius:3px;">'
-            f'{safe_sentence}</span>'
-        )
-
-        highlighted_chars += len(sentence)
-
-        flagged_sentences.append(
-            (
-                sentence,
-                probability,
-                "moderate"
+            flagged_sentences.append(
+                (
+                    sentence,
+                    probability,
+                    "strong"
+                )
             )
-        )
 
-    # NO HIGHLIGHT
-    else:
+        # YELLOW = moderate AI signal (50–69.9%)
+        elif probability >= 50:
 
-        highlighted_parts.append(
-            safe_sentence
-        )
+            highlighted_parts.append(
+                f'<span style="background-color:#fff29a; '
+                f'padding:2px; border-radius:3px;">'
+                f'{safe_sentence}</span>'
+            )
+
+            highlighted_chars += len(sentence)
+
+            flagged_sentences.append(
+                (
+                    sentence,
+                    probability,
+                    "moderate"
+                )
+            )
+
+        # NO HIGHLIGHT
+        else:
+
+            highlighted_parts.append(
+                safe_sentence
+            )
 
     # ==================================================
     # AI HIGHLIGHT COVERAGE
