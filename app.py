@@ -479,6 +479,148 @@ texts = [
     "In the next line, Macbeth completely ignores the first apparition, He then claims that he doesn't need to fear Macduff at all.",
 
     "His interpretation of this quote is easily disproven when Macduff says that he was ripped out of his mother's body and then slays Macbeth.",
+
+    "Hydropower can be a sustainable and eco-friendly source of electricity if it is carefully planned and built.",
+
+    "Hydropower can be a non-polluting, low-cost, and sustainable alternative energy source if built and operated correctly.",
+
+    "Hydropower can also reduce the amount of fossil fuels.",
+
+    "Some hydropower projects do things that harm the environment.",
+
+    "Large dams can often create the need to clear out large sections of the forest.",
+
+    "The flooding to create the reservoir can cause the vegetation beneath the water to decay and release methane, a greenhouse gas.",
+
+    "The operation of the dam can disrupt the natural flow of water, harming the ecosystem.",
+
+    "As of the 2010s, one sixth of the world's electricity comes from hydropower.",
+
+    "Moving water has been a source of energy since ancient times.",
+
+    "Hydropower turns electrical energy into mechanical energy.",
+
+    "More recently, hydropower has become a much more dependable source of energy.",
+
+    "The Francis turbine has 90% efficiency and is the most commonly used turbine around the world.",
+
+    "The first hydroelectric plant was built in Appleton, Wisconsin.",
+
+    "One of the first hydropower projects was actually the Hoover Dam.",
+
+    "Not all hydropower plants are used for electricity.",
+
+    "Out of 80,000 dams, about 2,540 are used for hydropower.",
+
+    "Also, not all hydropower plants need dams.",
+
+    "Water is a clean, renewable alternative energy source.",
+
+    "It also is the cheapest energy source.",
+
+    "Electricity from hydropower is supposed to double by 2050 because it is supposed to keep 3.3 billion tons of carbon dioxide out of the atmosphere.",
+
+    "Hydropower comes at a high environmental and social cost because of the construction of dams.",
+
+    "Only 19% of potential hydropower sites have been developed by the mid-2010s.",
+
+    "Hydropower is in all but two US states.",
+
+    "Once the dam is installed, water is free.",
+
+    "The amount of electricity produced is relatively easy to control.",
+
+    "The Three Gorges Dam displaced an estimated 1.2 million people and flooded hundreds of villages.",
+
+    "Dams prevent fish like salmon from swimming upstream and being able to spawn.",
+
+    "Hydropower plants can cause low dissolved oxygen levels in the water, causing harm to the ecosystem.",
+
+    "Hydropower accounts for 27% of renewable energy and 5.86% of all energy.",
+
+    "In 2023, 60% of Washington's electricity came from hydropower.",
+
+    "Idaho, Washington, and Oregon get most of their energy from hydropower.",
+
+    "Hydropower can be used for other things than electricity such as flood control, irrigation, and water supply.",
+
+    "Idaho, Washington, and Oregon have lower electricity bills than the rest of the country.",
+
+    "Most of the equipment needed at hydropower plants lasts really long and rarely needs to be replaced.",
+
+    "The upfront costs to build the dam are a lot.",
+
+    "Hydropower is energy from flowing water.",
+
+    "More than 2,000 years ago, the Greeks used it to run wheels for grinding grain.",
+
+    "In Norway, 99% of all electricity comes from hydropower.",
+
+    "The largest hydropower plant in the world is the Three Gorges Dam.",
+
+    "The Three Gorges Dam produces enough electricity to supply 70 to 80 million homes.",
+
+    "Small-scale hydropower is hydropower without dams or reservoirs.",
+
+    "Many people consider small-scale hydropower a much more eco-friendly option.",
+
+    "It is one of the most cost-effective alternative energy sources.",
+
+    "Hydropower is often preferred when available.",
+
+    "Hydropower plants in small, remote areas can have a big impact on the community.",
+
+    "Hydropower can disrupt the natural flow of rivers.",
+
+    "Hydroelectricity is electricity generated from hydropower.",
+
+    "Most of the energy comes from the potential energy in the water.",
+
+    "The power from the dam depends on the volume of the water and the height of the dam.",
+
+    "Pumped-storage allows you to move the height of the reservoir depending on the water needed.",
+
+    "In 2021, pumped-storage schemes provided almost 85% of the world's grid storage.",
+
+    "In 2022, China produced 30% of the world's energy from hydropower.",
+
+    "Paraguay gets almost all of its energy from hydropower and exports far more than they use.",
+
+    "Hydropower provides large amounts of low-carbon electricity.",
+
+    "The amount of electricity produced can be increased or decreased on demand.",
+
+    "Once the hydropower plant is built, it produces no direct waste and emits considerably less greenhouse gases than fossil fuels do.",
+
+    "Switzerland has developed 88% of its potential hydropower use.",
+
+    "Mexico has developed 80% of its potential hydropower use.",
+
+    "If a hydropower plant is built in lowland rainforest areas, it may emit a large amount of fossil fuels.",
+
+    "Dams can cause the loss of fertile land and the displacement of many people.",
+
+    "Dams can disrupt the natural flow in rivers.",
+
+    "If a dam fails, it can be catastrophic.",
+
+    "Statkraft is Europe's largest producer of hydropower.",
+
+    "Around one sixth of the world's energy comes from hydropower.",
+
+    "As of 2024, 88% of Norway's energy comes from hydropower.",
+
+    "Statkraft has 365 hydropower plants worldwide.",
+
+    "Hydropower plants without reservoirs are called run-of-water hydropower plants.",
+
+    "Around 50% of Europe's reservoir capacity is in Norway.",
+
+    "Statkraft owns about 50% of Norway's reservoirs.",
+
+    "Hydropower is very flexible with the amount of energy it can produce.",
+
+    "Droughts or little rain can impact the energy production of hydropower plants.",
     
     #AI
 
@@ -992,7 +1134,7 @@ texts = [
     
     ]
 
-labels = [0] * 233 + [1] * 254
+labels = [0] * 303 + [1] * 254
 
 # ==================================================
 # TRAIN MODEL
