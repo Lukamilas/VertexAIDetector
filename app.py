@@ -1,9 +1,88 @@
 import streamlit as st
+import random
+import re
+import html
+import numpy as np
+
+from scipy.sparse import hstack
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 from test_data import test_human, test_ai
+
+# Style Features
+
+def calculate_style_features(text):
+
+    sentences = re.split(
+        r'(?<=[.!?])\s+',
+        text.strip()
+    )
+
+    words = re.findall(
+        r'\b[\w\']+\b',
+        text.lower()
+    )
+
+    sentence_lengths = [
+        len(re.findall(r'\b[\w\']+\b', sentence))
+        for sentence in sentences
+        if sentence.strip()
+    ]
+
+    total_words = len(words)
+
+    unique_words = len(set(words))
+
+    vocabulary_diversity = (
+        unique_words / total_words
+        if total_words > 0
+        else 0
+    )
+
+    avg_sentence_length = (
+        sum(sentence_lengths) / len(sentence_lengths)
+        if sentence_lengths
+        else 0
+    )
+
+    sentence_length_variation = (
+        np.std(sentence_lengths)
+        if len(sentence_lengths) > 1
+        else 0
+    )
+
+    transitions = [
+        "furthermore",
+        "moreover",
+        "additionally",
+        "however",
+        "consequently",
+        "therefore",
+        "ultimately",
+        "in addition",
+        "in conclusion"
+    ]
+
+    transition_count = sum(
+        text.lower().count(word)
+        for word in transitions
+    )
+
+    em_dash_count = text.count("—")
+    semicolon_count = text.count(";")
+    colon_count = text.count(":")
+
+    return {
+        "avg_sentence_length": avg_sentence_length,
+        "sentence_length_variation": sentence_length_variation,
+        "vocabulary_diversity": vocabulary_diversity,
+        "transition_count": transition_count,
+        "em_dash_count": em_dash_count,
+        "semicolon_count": semicolon_count,
+        "colon_count": colon_count
+    }
 
 # TRAINING DATA
 # 0 = Human
