@@ -1737,33 +1737,57 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
 
 
 # ==================================================
-# EXISTING REASONS
+# WRITING PATTERN ANALYSIS
 # ==================================================
 
-    with st.expander("Reasons for AI"):
+    st.subheader("Writing Pattern Analysis")
 
-        if ai_reasons:
+    style_features = calculate_style_features(user_text)
 
-            for word, score in ai_reasons:
+    with st.expander("Sentence Structure"):
 
-                st.write(f"• {word}")
+        st.write(
+            f"Average sentence length: "
+            f"{style_features['avg_sentence_length']:.1f} words"
+        )
 
-        else:
+        st.write(
+            f"Sentence length variation: "
+            f"{style_features['sentence_length_variation']:.1f}"
+        )
 
-            st.write("None")
+        st.caption(
+            "Sentence-length variation measures how much sentence lengths "
+            "differ throughout the writing."
+        )
+        )
 
+        st.write(
+            f"Sentence length variation: "
+            f"{style_features['sentence_length_variation']:.1f}"
+        )
 
-    with st.expander("Reasons for Human"):
+    with st.expander("Vocabulary"):
+        st.write(
+            f"Vocabulary diversity: "
+            f"{style_features['vocabulary_diversity'] * 100:.1f}%"
+        )
 
-        if human_reasons:
+    with st.expander("Transitions"):
+        st.write(
+            f"Detected transition words/phrases: "
+            f"{style_features['transition_count']}"
+        )
 
-            for word, score in human_reasons:
+    with st.expander("Punctuation"):
+        st.write(
+            f"Em dashes: {style_features['em_dash_count']}"
+        )
 
-                 st.write(f"• {word}")
+        st.write(
+            f"Semicolons: {style_features['semicolon_count']}"
+        )
 
-        else:
-
-            st.write("None")
-
-
-
+        st.write(
+            f"Colons: {style_features['colon_count']}"
+        )
