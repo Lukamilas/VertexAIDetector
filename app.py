@@ -1759,8 +1759,7 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         st.caption(
             "Sentence-length variation measures how much sentence lengths "
             "differ throughout the writing."
-        )
-        )
+        )        
 
         st.write(
             f"Sentence length variation: "
