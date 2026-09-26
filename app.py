@@ -1792,20 +1792,25 @@ if st.button("Analyze", key="analyze_button") and user_text.strip():
         )
 
     with st.expander("Transitions"):
-        st.write(
-            f"Detected transition words/phrases: "
-            f"{style_features['transition_count']}"
-        )
+
+    st.write(
+        f"Transition words per 100 words: "
+        f"{style_features['transition_rate']:.1f}"
+    )
 
     with st.expander("Punctuation"):
+
         st.write(
-            f"Em dashes: {style_features['em_dash_count']}"
+            f"Em dashes per 100 words: "
+            f"{style_features['em_dash_rate']:.1f}"
         )
 
         st.write(
-            f"Semicolons: {style_features['semicolon_count']}"
+            f"Semicolons per 100 words: "
+            f"{style_features['semicolon_rate']:.1f}"
         )
 
         st.write(
-            f"Colons: {style_features['colon_count']}"
+            f"Colons per 100 words: "
+            f"{style_features['colon_rate']:.1f}"
         )
