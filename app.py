@@ -66,23 +66,47 @@ def calculate_style_features(text):
     ]
 
     transition_count = sum(
-        text.lower().count(word)
-        for word in transitions
+    text.lower().count(word)
+    for word in transitions
+    )
+
+    transition_rate = (
+        transition_count / total_words * 100
+        if total_words > 0
+        else 0
     )
 
     em_dash_count = text.count("—")
     semicolon_count = text.count(";")
     colon_count = text.count(":")
 
+    em_dash_rate = (
+        em_dash_count / total_words * 100
+        if total_words > 0
+        else 0
+    )
+
+    semicolon_rate = (
+        semicolon_count / total_words * 100
+        if total_words > 0
+        else 0
+    )
+
+    colon_rate = (
+        colon_count / total_words * 100
+        if total_words > 0
+        else 0
+    )
+
     return {
-        "avg_sentence_length": avg_sentence_length,
-        "sentence_length_variation": sentence_length_variation,
-        "vocabulary_diversity": vocabulary_diversity,
-        "transition_count": transition_count,
-        "em_dash_count": em_dash_count,
-        "semicolon_count": semicolon_count,
-        "colon_count": colon_count
-    }
+    "avg_sentence_length": avg_sentence_length,
+    "sentence_length_variation": sentence_length_variation,
+    "vocabulary_diversity": vocabulary_diversity,
+    "transition_rate": transition_rate,
+    "em_dash_rate": em_dash_rate,
+    "semicolon_rate": semicolon_rate,
+    "colon_rate": colon_rate
+}
 
 # TRAINING DATA
 # 0 = Human
